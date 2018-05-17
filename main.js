@@ -12,6 +12,8 @@ camera.lookAt(0, 0, 0);
 camera.add(new THREE.PointLight());
 scene.add(camera);
 
+new THREE.OrbitControls(camera);
+
 // RENDER
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(800, 600);
