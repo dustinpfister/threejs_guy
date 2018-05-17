@@ -28,6 +28,7 @@ var loop = function () {
     requestAnimationFrame(loop);
 
     guy.moveArm('arm_right', .4 + .2 * bias, .25);
+    guy.moveLegs(per);
 
     renderer.render(scene, camera);
 

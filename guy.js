@@ -102,8 +102,8 @@ var Guy = (function () {
                 new THREE.BoxGeometry(.5, 2, .5),
                 material_leg);
         this.leg_right.geometry.translate(0, -1, 0);
-        this.leg_right.position.x = .25;
-        this.leg_right.position.y = -1;
+        this.leg_right.position.x = .35;
+        this.leg_right.position.y = -1.1;
         this.leg_right.castShadow = true;
         this.group.add(this.leg_right);
 
@@ -112,8 +112,8 @@ var Guy = (function () {
                 new THREE.BoxGeometry(.5, 2, .5),
                 material_leg);
         this.leg_left.geometry.translate(0, -1, 0);
-        this.leg_left.position.x =  - .25;
-        this.leg_left.position.y = -1;
+        this.leg_left.position.x =  -.35;
+        this.leg_left.position.y = -1.1;
         this.leg_left.castShadow = true;
         this.group.add(this.leg_left);
 
