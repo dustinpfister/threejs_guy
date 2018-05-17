@@ -48,10 +48,10 @@ var Guy = (function () {
     // the guy constructor
     var Guy = function () {
 
+        // a group that will hold all mesh objects
         this.group = new THREE.Group();
-        //this.group.castShadow = true;
 
-        // head
+        // HEAD
         this.head = new THREE.Mesh(
                 new THREE.BoxGeometry(1, 1, 1),
                 materials_head);
@@ -68,17 +68,16 @@ var Guy = (function () {
         this.head.geometry.faces[8].materialIndex = 1;
         this.head.geometry.faces[9].materialIndex = 1;
         this.head.castShadow = true;
-
         this.group.add(this.head);
 
-        // body
+        // BODY
         this.body = new THREE.Mesh(
                 new THREE.BoxGeometry(1, 2, 1),
                 material_body);
         this.body.castShadow = true;
         this.group.add(this.body);
 
-        // right arm
+        // RIGHT ARM
         this.arm_right = new THREE.Mesh(
                 new THREE.BoxGeometry(.5, 1.5, .5),
                 material_arm);
@@ -88,7 +87,7 @@ var Guy = (function () {
         this.arm_right.castShadow = true;
         this.group.add(this.arm_right);
 
-        // left arm
+        // LEFT ARM
         this.arm_left = new THREE.Mesh(
                 new THREE.BoxGeometry(.5, 1.5, .5),
                 material_arm);
@@ -98,7 +97,7 @@ var Guy = (function () {
         this.arm_left.castShadow = true;
         this.group.add(this.arm_left);
 
-        // right leg
+        // RIGHT LEG
         this.leg_right = new THREE.Mesh(
                 new THREE.BoxGeometry(.5, 2, .5),
                 material_leg);
@@ -108,7 +107,7 @@ var Guy = (function () {
         this.leg_right.castShadow = true;
         this.group.add(this.leg_right);
 
-        // left leg
+        // LEFT LEG
         this.leg_left = new THREE.Mesh(
                 new THREE.BoxGeometry(.5, 2, .5),
                 material_leg);
