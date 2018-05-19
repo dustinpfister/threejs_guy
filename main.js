@@ -5,13 +5,13 @@ var scene = new THREE.Scene();
 var guy1 = new Guy();
 scene.add(guy1.group);
 
-var guy2 = new Guy();
-guy2.group.position.set(5, 0, 0);
-scene.add(guy2.group);
+//var guy2 = new Guy();
+//guy2.group.position.set(5, 0, 0);
+//scene.add(guy2.group);
 
-var guy3 = new Guy();
-guy3.group.position.set(-5, 0, 0);
-scene.add(guy3.group);
+//var guy3 = new Guy();
+//guy3.group.position.set(-5, 0, 0);
+//scene.add(guy3.group);
 
 // CAMERA
 var camera = new THREE.PerspectiveCamera(50, 8 / 6, .05, 100);
@@ -35,8 +35,15 @@ var loop = function () {
     r = Math.PI * 2 * per;
 
     requestAnimationFrame(loop);
+	
+	//var swings = 4;
+	//var armSwing = Math.cos(r * swings)+ 1 / 2;
+	//guy1.moveArm('arm_right',-.1 + .2 * armSwing,0);
 
-    // guy1 waves and walaks
+	guy1.walk(per,4);
+	
+    // guy1 waves and walks
+	/*
     guy1.moveArm('arm_right', .4 + .2 * bias, .25);
     guy1.moveArm('arm_left',  - .05 + .1 * bias, 0);
     guy1.moveHead(.05 - .1 * bias);
@@ -55,6 +62,7 @@ var loop = function () {
 
     guy3.moveArm('arm_right', 0, bias * 2);
     guy3.moveArm('arm_left', 0, bias * 2);
+	*/
 
     renderer.render(scene, camera);
 
