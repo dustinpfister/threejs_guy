@@ -166,8 +166,8 @@ var Guy = (function () {
         var r = Math.PI * 2 * per;
         var armPer = Math.cos(r * swings) + 1 / 2;
 
-        guy1.moveArm('arm_right',  - .1 + .2 * armPer, 0);
-        guy1.moveArm('arm_left', .1 - .2 * armPer, 0);
+        this.moveArm('arm_right',  - .1 + .2 * armPer, 0);
+        this.moveArm('arm_left', .1 - .2 * armPer, 0);
 
         this.moveLegs(per * swings);
 
